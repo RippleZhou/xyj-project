@@ -1,0 +1,161 @@
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>寻颜记</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="css/entr-reset.css">
+    <link rel="stylesheet" type="text/css" href="css/entr.css">
+	<style type="text/css">
+            ul,li{list-style: none;padding:0;margin:0}
+            .btn{-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;border-radius:3px;
+                 background-color: #ff8400;color: #fff;display: inline-block;height: 28px;line-height: 28px;text-align: center;
+                 width: 72px;transition: background-color 0.2s linear 0s;border:none;cursor:pointer;margin:0 0 20px;}
+            .demo{width:700px;margin:0 auto;}
+			.progress{border:1px solid #ddd;}
+            .btn:hover{background-color: #e95a00;text-decoration: none}
+            .ul_pics li{float:left;width:129px;height:189px;border:1px solid #ddd;padding:2px;text-align: center;margin:0 5px 5px 0;}
+            .ul_pics li .img{width: 129px;height: 189px;display: table-cell;vertical-align: middle;}
+            .ul_pics li img{max-width: 129px;max-height: 189px;vertical-align: middle;}
+            .progress{position:relative;padding: 1px; border-radius:3px; margin:60px 0 0 0;} 
+            .bar {background-color: green; display:block; width:0%; height:20px; border-radius:3px; } 
+            .percent{position:absolute; height:20px; display:inline-block;top:3px; left:2%; color:#fff } 
+			.demo p{margin: 3px 0;font-size:12px;color:#666;}
+        </style>
+</head>
+
+<body>
+    <div class="backgroudBox"></div>
+        <div class="fontBox">
+            <img src="./img/zi.png" alt="">
+        </div>
+        <div class="titleBox">
+            <img src="./img/hua.png" alt="">
+            <img src="./img/xun.png">
+            <span style="color: rgb(255, 255, 255);font-size: 0.6rem; position:absolute;top:27%;left:23%;">首届</span>
+            <span style="color: rgb(255, 255, 255);font-size: 0.6rem; position:absolute;top:63%;left:40%;">网络评选大赛</span>
+        </div>
+        <div class="rule">
+            <div class="rule_title">
+                <h5>赛制</h5>
+            </div>
+            <div class="rule_notice">  
+                <p>1.周赛、月赛、复活赛：</p>
+                <p>均在“赢紫科技”公众号进行投票评选</p>
+                <p>周赛、月赛均前三名晋级；</p>
+                <p>复活赛冠军晋级。</p>
+                <p>2.季赛：</p>
+                <p>月赛前三名，复活赛第一名，共10名选手进行网络评选。</p>
+            </div>
+        </div>
+        <div class="prize">
+            <div class="prize_title">    
+                <h5>奖品</h5>
+            </div>
+            <div class="prize_notice">
+                <p class="mt20">周赛</p>
+                <p>冠军&nbsp;&nbsp;&nbsp;&nbsp;300元现金</p>
+                <p>亚军&nbsp;&nbsp;&nbsp;&nbsp;100元现金</p>
+                <p>季军&nbsp;&nbsp;&nbsp;&nbsp;50元现金</p>
+                <p class="mt20">月赛</p>
+                <p>冠军&nbsp;&nbsp;&nbsp;&nbsp;价值1314元美甲储值卡一张</p>
+                <p>亚军&nbsp;&nbsp;&nbsp;&nbsp;价值1000元夏日修复美容套餐</p>
+                <p>季军&nbsp;&nbsp;&nbsp;&nbsp;价值500元知名餐厅美食一餐</p>
+                <p class="mt20">复活赛</p>
+                <p>冠军&nbsp;&nbsp;&nbsp;&nbsp;价值1314元美甲储值卡一张</p>
+                <p class="mt20">季赛</p>
+                <p>冠军&nbsp;&nbsp;&nbsp;&nbsp;价值8000元日韩豪华游轮双人游</p>
+                <p>亚军&nbsp;&nbsp;&nbsp;&nbsp;价值5000元南京美健整形消费卡</p>
+                <p>季军&nbsp;&nbsp;&nbsp;&nbsp;价值998元上海迪士尼门票2张</p>
+                <p class="mt20 mc">PS:月赛前3名、所有季赛选手可以自愿参加寻颜记组织的国内旅游拍等线下活动，费用由寻颜记组委会支出。</p>
+            </div>
+        </div>
+        <div class="apply w100">
+            <div class="apply_title w66">
+                <h5>报名</h5>
+            </div>
+            <div class="apple_notice w66">
+                <p class="mt20" style="word-break:break-all;">为确保活动质量，每期报名的选手经过筛选后参与周赛网络评选，请及时关注投票页面。</p>
+                <p>报名时间:即日起---9月21日</p>
+                <p>ps：一经发现刷票行为，取消参赛资格</p>
+            </div>
+            <form name="theForm" method="post" action="ins.php" onsubmit="return check();">
+                <div class="mt20" style=" margin-bottom: 50px;"><ul id="ul_pics" class="ul_pics clearfix"></ul></div>	
+					<button id="btn">上传图片</button>
+					<p style="margin:0 auto;width:60%;text-align:center;">请使用手机浏览器进行打开链接访问</p>			
+                <input type="text" name="xm" id="xm" placeholder="昵称">
+                <input type="text" name="birthday" id="birthday" placeholder="出生年月日">
+                <p style="margin: 0 auto; width: 74%;font-size: 0.2rem;height: 0.2rem;line-height: 0.2rem;color: #ccc;">日期格式：1900-01-01</p>
+                <input type="text" name="mobile" id="mobile" placeholder="手机">
+                 <textarea class="gexin" name="ly" value="个性宣言"type="text" onfocus="javascript:if(this.value=='个性宣言')this.value='';" ></textarea>
+                <button ttype="submit" name="submit">提 交(有点慢哦)</button>
+            </form>
+            <img src="img/liu.png" style="position:absolute;bottom:1rem;left:3.4rem;height: 50%;transform: rotate(117.132deg) translateZ(0px);">
+        </div>
+    <script src="js/entr.js"></script>
+    <script>
+        var toolBar = document.getElementById("toolBar"),
+            cont = document.getElementById("cont"),
+            dialog = document.getElementById("dialog"),
+            showDialog = document.getElementById("showDialog");
+    </script>
+	<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="plupload/plupload.full.min.js"></script>
+<script type="text/javascript">
+    var uploader = new plupload.Uploader({ //创建实例的构造方法
+    runtimes: 'html5,flash,silverlight,html4',
+    //上传插件初始化选用那种方式的优先级顺序
+    browse_button: 'btn',
+    // 上传按钮
+    url: "ajax.php",
+    //远程上传地址
+    flash_swf_url: 'plupload/Moxie.swf',
+    //flash文件地址
+    silverlight_xap_url: 'plupload/Moxie.xap',
+    //silverlight文件地址
+    filters: {
+        max_file_size: '5mb',
+        //最大上传文件大小（格式100b, 10kb, 10mb, 1gb）
+        mime_types: [ //允许文件上传类型
+        {
+            title: "files",
+            extensions: "jpg,png,gif"
+        }]
+    },
+    multi_selection: true,
+    //true:ctrl多文件上传, false 单文件上传
+    init: {
+        FilesAdded: function(up, files) { //文件上传前
+            if ($("#ul_pics").children("li").length >= 1) {
+                alert("您上传的图片太多了！");
+                uploader.destroy();
+            } else {
+                var li = '';
+                plupload.each(files,
+                function(file) { //遍历文件
+                    li += "<li id='" + file['id'] + "'><div class='progress'><span class='bar'></span><span class='percent'>0%</span></div></li>";
+                });
+                $("#ul_pics").append(li);
+                uploader.start();
+            }
+        },
+        UploadProgress: function(up, file) { //上传中，显示进度条
+            $("#" + file.id).find('.bar').css({
+                "width": file.percent + "%"
+            }).find(".percent").text(file.percent + "%");
+        },
+        FileUploaded: function(up, file, info) { //文件上传成功的时候触发
+            var data = JSON.parse(info.response);
+            $("#" + file.id).html("<div class='img'><img src='" + data.pic + "'/></div><p>" + data.name + "</p>");
+        },
+        Error: function(up, err) { //上传出错的时候触发
+            alert(err.message);
+        }
+    }
+});
+uploader.init();
+</script>
+</body>
+</html>

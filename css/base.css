@@ -1,0 +1,192 @@
+html,body,ul,li,div,p,a,img,table,tbody,tr,td,h1,h2,h3,h4,h5,i,em{
+	padding: 0;
+	margin: 0;
+	list-style:none;
+    text-decoration: none;
+    font-style:normal
+}
+html,body{
+    min-width: 320px;
+    max-width: 1366px;
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+img{
+	display: block;
+	width: 100%;
+}
+.f0{
+    font-size: 0;
+}
+.xunyanji{
+    height: 100%;
+    width: 100%;
+}
+.xunyanji_top{
+    width: 100%;
+    /*height: 12.87rem;*/
+}
+.xunyanji_top .logo{
+	width: 100%;
+	background-image: url('../img/top1.png');
+	background-size: 100% 100%;
+}
+.xunyanji_top .logo img{
+/*    margin: 0 auto;
+    width: 100%;
+    height: 80%;
+    padding: 0.6rem 0;*/
+    vertical-align: middle;
+}
+.xunyanji_top .top{
+    width: 100%;
+    background-image: url('../img/top2.png');
+    background-size: 100% 100%;
+}
+.xunyanji_top .notice{
+    width: 100%;
+    background-image: url('../img/3-3.png');
+    background-size: 100% 100%;
+}
+.xunyanji_top .apply{
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+.xunyanji_top .apply a{
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    font-size: 0.2rem;
+    padding: 4px 14px;
+    color:#fff;
+    position:absolute;
+}
+/* 第二页 */
+.xunyanji_container{
+    width: 100%;
+}
+.logo1{
+    background-image: url('../img/5.png');
+    background-size: 100% 100%;
+    width: 100%;
+}
+/*导航栏月赛*/
+.xunyanji_container .container_month{
+    width: 100%;
+}
+.container_month table,.container_month tbody,.container_month tr{
+    height: 100%;
+    width: 100%;
+}
+.container_month table{
+    height: 100%;
+    width: 100%;
+    background: url(../img/07.png) no-repeat;
+    background-size: 100% 100%;
+}
+.container_current{
+    border-bottom:1px solid #fff;
+}
+/*月赛预览导航*/
+.month_show {
+    position: relative;
+}
+.month-dis{
+    display:none;
+}
+.month-show{
+    display: block;
+}
+.month_show > div{
+    position: absolute;
+    z-index: 99;
+    left: -3%;
+    width: 100%;
+    background: #913a71;
+}
+.month_show ul{
+    text-align: center;
+}
+.month_show li a{
+    /*display: inline-block;*/
+    /*width: 100%;*/
+    height: 100%;
+    font-size: 0.3rem;
+    color: #ccc;
+}
+
+/*周赛当前状态和已公示状态*/
+.dsn{
+    display: none;
+}
+.container_pass,.container_going,.container_next{
+    display: block;
+    margin: 6% auto;
+    color: #fff;
+    font-size: 0.1rem;
+    text-align: center;
+}
+/*导航栏间距*/
+.container_month td{
+    padding: 0.1rem;
+}
+/*导航栏相对定位*/
+.xunyanji_container .first,.xunyanji_container .third,.xunyanji_container .fourth{
+    position: relative;
+}
+/*flex布局*/
+.xunyanji_container span.show_photo,.xunyanji_container span.show_rank{
+    display: inline-flex;
+    display: -webkit-inline-flex; /* Safari */
+    width: 50%;
+}
+
+.show_rank img,.show_photo img{
+     height: 100%;
+}
+.show .second{
+    position: relative;
+}
+.change_flex{
+    display: inline-flex;
+    display: -webkit-inline-flex;
+}
+.dsplay{
+    display: inline-block;
+}
+.w100{
+    width:100%;
+}
+.w50{
+    width:50%;
+}
+.fourth{
+    background:url('../img/bgc.jpg') no-repeat;
+    background-size: cover;
+}
+.fourth {
+    color:#ccc;
+    font-size: .5rem;
+}
+.more_join{
+    background: url(../img/space.jpg) no-repeat;
+    background-size:100% 100%;
+}
+div.more_rank_show span.show_rank,div.more_join span.join{
+    display: table;
+    height: 100%;
+}
+div.more_rank_show span.show_rank:first-child span,div.more_join span.join:first-child span{
+    font-size: 0.2rem;
+    color:#ccc;
+    display: table-cell;    /*ie7和ie6都不能识别 display: table-cell;*/
+    vertical-align: middle;
+    text-align: center;
+}
+
+
+

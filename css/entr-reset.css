@@ -1,0 +1,116 @@
+        body,html {
+            position: relative;
+            width: 100%;
+            max-width: 640px;
+            min-width: 320px;
+        }
+        .backgroudBox{
+            height: 100%;
+            width: 100%;
+            position:fixed;
+            top: 0;
+            left: 0;
+            background: url(../img/background.jpg) no-repeat;
+            background-size: cover;
+            z-index: -10000;
+        }
+        .fontBox img{
+            width: 1.5rem;
+        }
+        .titleBox{
+            margin:0 auto;
+            position: relative;
+        }
+        .titleBox img:nth-child(1){
+            top: -.7rem;
+            width: 100%;
+        }
+        .titleBox img:nth-child(2){
+            top: 37%;
+            width: 63%;
+            left: 15%;
+            position: absolute;
+            transform: translate(0px, 0px) scale(1, 1) rotate(0deg);
+        }
+        .rule,.prize,.apply{
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            width: 66%;
+            overflow: hidden;;
+        }
+        .rule h5,.prize h5,.apply h5{
+            background: url(../img/line.png) no-repeat center center;
+            background-size:100%; 
+            font-size:0.26rem;;
+            color:#fff;
+            margin:.5rem 0;
+        }
+        .rule p,.prize p,.apply p{
+            font-size: 14px;
+            color: #fff;
+            text-align: left;
+            vertical-align: center; 
+        }
+        .prize p{
+            text-align: center;
+        }
+        .mt20{
+            margin-top:20px;
+            margin-bottom: 30px;
+        }
+        .w100{
+            width:100%;
+        }
+        .w66{
+            width:66%;
+            margin: 0 auto;
+        }
+        p.mc{
+            width: 71%;
+            color: #f6b26a;
+            margin: 0 auto;
+            text-align: left;
+            padding-top: 20px;
+        }
+        form {
+            text-align: center;
+        }
+        form > input,form > textarea{
+            width: 72%;
+            height: 0.4rem;
+            margin: 0.1rem;
+            padding: 3px;
+        }
+        form textarea {
+            height:80px;
+        }
+        form div.mt20 button{
+            display: block;
+            margin: 5px auto;
+        }
+        form div span {
+            display: block;
+        }
+        form button {
+            width: 60%;
+            height: 35px;
+            border-radius: 5px;
+            background-color: purple;
+            border: 1px solid #ccc;
+            color: #fff;
+        }
+        form > div {
+            width: 50%;
+            border: 1px solid;
+            margin: 0 auto;
+            position: relative;
+            margin-bottom: 1.5rem;
+            height: 2.5rem;
+        }
+        form > div input {
+            margin: 0 auto;
+            width: 100%;
+            opacity: 0;
+            height: 100%;
+        }
