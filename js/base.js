@@ -41,6 +41,7 @@ $(function(){
     }); 
     $('#second-xyj').click(function(event) {
         /* Act on the event */
+        $('#show-secondWeek span').addClass('container_current').parents().siblings().children('span').removeClass('container_current');
         $('#show-firstmonth').addClass('dsn');
         $('#show-secondmonth').removeClass('dsn');
         $('td.month_show').children('img').attr("src","./img/Second-month.png");
@@ -68,20 +69,24 @@ $(function(){
         /* Act on the event */
         $('td.month_show>div').slideUp().removeClass('month-show').addClass('month-dis');
         $('#show-firstmonth').find('div.show').eq(0).removeClass('dsn').siblings().addClass('dsn');
+        $('#show-secondmonth').find('div.show').eq(0).removeClass('dsn').siblings().addClass('dsn');
     });    
     $('#show-secondWeek').click(function() {
         /* Act on the event */
         $('td.month_show>div').slideUp().removeClass('month-show').addClass('month-dis');
         $('#show-firstmonth').find('div.show').eq(1).removeClass('dsn').siblings().addClass('dsn');
+        $('#show-secondmonth').find('div.show').eq(1).removeClass('dsn').siblings().addClass('dsn');
     });    
     $('#show-thirdWeek').click(function() {
         /* Act on the event */
         $('td.month_show>div').slideUp().removeClass('month-show').addClass('month-dis');
         $('#show-firstmonth').find('div.show').eq(2).removeClass('dsn').siblings().addClass('dsn');
+        $('#show-secondmonth').find('div.show').eq(2).removeClass('dsn').siblings().addClass('dsn');
     }); 
     $('#show-monthWeek').click(function() {
         /* Act on the event */
         $('td.month_show>div').slideUp().removeClass('month-show').addClass('month-dis');
         $('#show-firstmonth').find('div.show').eq(3).removeClass('dsn').siblings().addClass('dsn');
+        $('#show-secondmonth').find('div.show').eq(3).removeClass('dsn').siblings().addClass('dsn');
     });
 })
