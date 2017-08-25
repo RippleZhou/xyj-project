@@ -32,18 +32,18 @@ $(function(){
 
     $('#first-xyj').click(function(event) {
         /* Act on the event */
-        $('#show-firstmonth').removeClass('dsn');
-        $('#show-secondmonth').addClass('dsn');
+        $('#show-firstmonth').removeClass('dsn').siblings().addClass('dsn');
         $('.container_month td span').removeClass('container_current');
         $('#show-monthWeek span').addClass('container_current');
         $('td.month_show').children('img').attr("src","./img/First-month.png");
+        $('#show-firstmonth').find('div.show').eq(3).removeClass('dsn').siblings().addClass('dsn');
 
     }); 
     $('#second-xyj').click(function(event) {
         /* Act on the event */
+        $('#show-secondmonth').find('div.show').eq(1).removeClass('dsn').siblings().addClass('dsn');
         $('#show-secondWeek span').addClass('container_current').parents().siblings().children('span').removeClass('container_current');
-        $('#show-firstmonth').addClass('dsn');
-        $('#show-secondmonth').removeClass('dsn');
+        $('#show-firstmonth').addClass('dsn').siblings().removeClass('dsn');
         $('td.month_show').children('img').attr("src","./img/Second-month.png");
     });
 
