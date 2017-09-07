@@ -41,8 +41,8 @@ $(function(){
     }); 
     $('#second-xyj').click(function(event) {
         /* Act on the event */
-        $('#show-secondmonth').find('div.show').eq(2).removeClass('dsn').siblings().addClass('dsn');
-        $('#show-thirdWeek span').addClass('container_current').parents().siblings().children('span').removeClass('container_current');
+        $('#show-secondmonth').find('div.show').eq(3).removeClass('dsn').siblings().addClass('dsn');
+        $('#show-monthWeek span').addClass('container_current').parents().siblings().children('span').removeClass('container_current');
         $('#show-firstmonth').addClass('dsn').siblings().removeClass('dsn');
         $('td.month_show').children('img').attr("src","./img/Second-month.png");
     });
