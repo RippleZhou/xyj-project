@@ -97,6 +97,6 @@ $(function(){
         /* Act on the event */
         $('td.month_show>div').slideUp().removeClass('month-show').addClass('month-dis');
         $('#show-firstmonth').find('div.show').eq(3).removeClass('dsn').siblings().addClass('dsn');
-        // $('#show-thirdmonth').find('div.show').eq(3).removeClass('dsn').siblings().addClass('dsn');
+        $('#show-secondmonth').find('div.show').eq(3).removeClass('dsn').siblings().addClass('dsn');
     });
 })
