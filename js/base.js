@@ -49,9 +49,9 @@ $(function(){
     $('#third-xyj').click(function(event) {
         /* Act on the event */
         console.log(111)
-        $('#show-thirdmonth').find('div.show').eq(0).removeClass('dsn').siblings().addClass('dsn');
-        $('#show-firstWeek span').addClass('container_current').parents().siblings().children('span').removeClass('container_current');
         $('#show-thirdmonth').removeClass('dsn').siblings().addClass('dsn');
+        $('#show-thirdmonth').find('div.show').eq(1).removeClass('dsn').siblings().addClass('dsn');
+        $('#show-secondWeek span').addClass('container_current').parents().siblings().children('span').removeClass('container_current');
         $('td.month_show').children('img').attr("src","./img/Third-month.png");
     });
 
@@ -78,12 +78,14 @@ $(function(){
         $('td.month_show>div').slideUp().removeClass('month-show').addClass('month-dis');
         $('#show-firstmonth').find('div.show').eq(0).removeClass('dsn').siblings().addClass('dsn');
         $('#show-secondmonth').find('div.show').eq(0).removeClass('dsn').siblings().addClass('dsn');
+        $('#show-thirdmonth').find('div.show').eq(0).removeClass('dsn').siblings().addClass('dsn');
     });    
     $('#show-secondWeek').click(function() {
         /* Act on the event */
         $('td.month_show>div').slideUp().removeClass('month-show').addClass('month-dis');
         $('#show-firstmonth').find('div.show').eq(1).removeClass('dsn').siblings().addClass('dsn');
         $('#show-secondmonth').find('div.show').eq(1).removeClass('dsn').siblings().addClass('dsn');
+        $('#show-thirdmonth').find('div.show').eq(1).removeClass('dsn').siblings().addClass('dsn');
     });    
     $('#show-thirdWeek').click(function() {
         /* Act on the event */
@@ -95,6 +97,6 @@ $(function(){
         /* Act on the event */
         $('td.month_show>div').slideUp().removeClass('month-show').addClass('month-dis');
         $('#show-firstmonth').find('div.show').eq(3).removeClass('dsn').siblings().addClass('dsn');
-        $('#show-secondmonth').find('div.show').eq(3).removeClass('dsn').siblings().addClass('dsn');
+        // $('#show-thirdmonth').find('div.show').eq(3).removeClass('dsn').siblings().addClass('dsn');
     });
 })
