@@ -52,8 +52,8 @@ $(function(){
         /* Act on the event */
         console.log("第三期")
         $('#show-thirdmonth').removeClass('dsn').siblings().addClass('dsn');
-        $('#show-thirdmonth').find('div.show').eq(2).removeClass('dsn').siblings().addClass('dsn');
-        $('#show-thirdWeek span').addClass('container_current').parents().siblings().children('span').removeClass('container_current');
+        $('#show-thirdmonth').find('div.show').eq(3).removeClass('dsn').siblings().addClass('dsn');
+        $('#show-monthWeek span').addClass('container_current').parents().siblings().children('span').removeClass('container_current');
         $('td.month_show').children('img').attr("src","./img/Third-month.png");
     });
 
@@ -101,5 +101,6 @@ $(function(){
         $('td.month_show>div').slideUp().removeClass('month-show').addClass('month-dis');
         $('#show-firstmonth').find('div.show').eq(3).removeClass('dsn').siblings().addClass('dsn');
         $('#show-secondmonth').find('div.show').eq(3).removeClass('dsn').siblings().addClass('dsn');
+        $('#show-thirdmonth').find('div.show').eq(3).removeClass('dsn').siblings().addClass('dsn');
     });
 })
